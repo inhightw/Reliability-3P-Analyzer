@@ -86,11 +86,6 @@ def generate_probability_plot(r, total_n, f_t_points, F_vals, f_t, s_t):
         param_text = f"Sigma = {r['Sigma']:.6f}, Mu = {r['Mu']:.6f}, Gamma = {gamma:.6f}"
     ax.text(0.02, -0.12, param_text, transform=ax.transAxes, fontsize=9, fontweight="bold", color="black")
     
-    # 右下角簽名與時間 (對標 Moxa/Henry Luo 簽章風格)
-    time_str = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    sig_text = f"Henry Luo\nMoxa\n{time_str}"
-    ax.text(0.82, -0.15, sig_text, transform=ax.transAxes, fontsize=8, color="#555555")
-    
     ax.legend(loc="upper left")
     plt.tight_layout()
     return fig
